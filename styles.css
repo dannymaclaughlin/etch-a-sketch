@@ -1,8 +1,10 @@
-/* * {
-    border: 2px solid red;
-} */
+* {
+    /* border: 2px solid red; */
+    border: 0px;
+    margin: 0px;
+}
 
-.contentDivs {
+#contentDivs {
     width: 50px;
     height: 50px;
     border: 1px solid black;
@@ -10,6 +12,8 @@
 
 #mainContainer {
     display: grid;
-    grid-template-rows: repeat(16, 50px);
-    grid-template-columns: repeat(16, 50px);
+    grid-template-rows: repeat(8, 50px);
+    grid-template-columns: repeat(8, 50px);
+    justify-content: center;
 }
+
