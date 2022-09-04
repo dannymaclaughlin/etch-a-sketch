@@ -2,18 +2,40 @@
     /* border: 2px solid red; */
     border: 0px;
     margin: 0px;
+    background: lightgray;
 }
 
-#contentDivs {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+html {
+    font-family: helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.headerName {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 70px;
 }
 
 #mainContainer {
-    display: grid;
-    grid-template-rows: repeat(8, 50px);
-    grid-template-columns: repeat(8, 50px);
-    justify-content: center;
+    
 }
 
+#contentDivContainer {
+    display: grid;
+    grid-template-rows: repeat(16, 40px);
+    grid-template-columns: repeat(16, 40px);
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.contentDivs {
+    width: 40px;
+    height: 40px;
+    background: white;
+}
+
+.footerText {
+    padding-top: 30em;
+    font-weight: bold;
+    text-align: center;
+}
