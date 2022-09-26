@@ -21,7 +21,21 @@ html {
     
 }
 
-#contentDivContainer {
+button {
+    background-color: white;
+    padding: .5em;
+    border-radius: 2px;
+}
+
+#densityButton {
+    
+}
+
+#boardContainer {
+    padding-top: .5em;
+}
+
+#grid {
     display: grid;
     grid-template-rows: repeat(16, 40px);
     grid-template-columns: repeat(16, 40px);
@@ -46,8 +60,3 @@ footer {
     padding: 5px;
 }
 
-button {
-    background-color: white;
-    padding: .5em;
-    border-radius: 2px;
-}
