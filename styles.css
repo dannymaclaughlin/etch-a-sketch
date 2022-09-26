@@ -9,7 +9,6 @@ html {
     font-family: helvetica, Arial, sans-serif;
     text-align: center;
     background: lightskyblue;
-    /* height: 100vh; */
 }
 
 .headerName {
@@ -27,7 +26,6 @@ html {
     grid-template-rows: repeat(16, 40px);
     grid-template-columns: repeat(16, 40px);
     justify-content: center;
-    /* border: 1px solid red; */
 }
 
 .contentDivs {
@@ -37,7 +35,6 @@ html {
 }
 
 .footerText {
-    /* padding-top: 3em; */
     font-weight: bold;
     text-align: center;
 }
