@@ -10,7 +10,6 @@ for(x=0; x<256; x++) {
     document.getElementById('grid').appendChild(contentDivs);
 }
 
-// change div coor when mouseOver
 document.querySelectorAll('.contentDivs').forEach(function(element) {
     element.addEventListener('mouseover', () => {
         element.style.background = 'black';
