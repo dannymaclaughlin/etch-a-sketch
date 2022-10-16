@@ -3,7 +3,7 @@ const densityButton = document.querySelector('#densityButton');
 const clearBoard = document.querySelector('#clearBoard');
 let boardDensity;
 
-// creates initial grid upon page load
+// creates initial grid for use upon page load
 function initGrid() {
     for(x=0; x<256; x++) {
         const contentDivs = document.createElement('div');
@@ -49,13 +49,21 @@ function colorPixel() {
     })
 }
 
+// clears current grid upon clicking the clear button by changing style of grid's childnodes to default color(white)
+function clearCurrentGrid() {
+    grid.childNodes.forEach((child) => {
+        child.style.background = 'white';
+    })
+}
+
 // event listeners
 densityButton.addEventListener('click', () => {
     generateNewGrid();
 });
 
 clearBoard.addEventListener('click', () => {
-
+    clearCurrentGrid();
 });
 
+// code ran upon page load
 initGrid();
