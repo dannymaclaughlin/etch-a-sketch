@@ -7,7 +7,7 @@
 html {
     font-family: helvetica, Arial, sans-serif;
     text-align: center;
-    background: lightskyblue;
+    background: lightslategray;
 }
 
 .headerName {
@@ -31,13 +31,61 @@ button {
 }
 
 #gridContainer {
-    padding-top: .5em;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'left-controller . grid-screen . right-controller'
+    'left-controller . grid-screen . right-controller'
+    'left-controller . grid-screen . right-controller';
+
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#gridContainer {
+    z-index: 2;
+    background-color: black;
+    width: 850px;
+    padding-top: .8em;
+    padding-bottom: .8em;
+    border-radius: 30px;
+    position: relative;
+}
+
+.leftController {
+    grid-area: left-controller;
+    z-index: 1;
+    
+    background-color: crimson;
+    width: 150px;
+    height: 500px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-left: 10px;
+    
+}
+
+.rightController {
+    grid-area: right-controller;
+    z-index: 2;
+
+    background-color: cyan;
+    width: 150px;
+    height: 500px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-right: 10px;
+}
+
+.gridMainStyle {
+    
 }
 
 #grid {
     display: grid;
+    grid-area: grid-screen;
     width: 500px;
     height: 500px;
     grid-template-rows: repeat(16, 2fr);
