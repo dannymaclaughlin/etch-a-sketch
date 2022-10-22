@@ -7,7 +7,7 @@
 html {
     font-family: helvetica, Arial, sans-serif;
     text-align: center;
-    background: lightslategray;
+    background: #68CCED;
 }
 
 .headerName {
@@ -17,7 +17,13 @@ html {
 }
 
 #mainContainer {
-    
+    position: relative;
+    border: none;
+    display: block;
+    margin: auto;
+    background-color: red;
+    height: 600px;
+    width: 600px;
 }
 
 button {
@@ -42,45 +48,146 @@ button {
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
+    border: none;
 }
 
 #gridContainer {
-    z-index: 2;
+    z-index: 999;
     background-color: black;
     width: 850px;
     padding-top: .8em;
     padding-bottom: .8em;
-    border-radius: 30px;
-    position: relative;
+    border-radius: 80px;
+    position: absolute;
+    top: 20%;
+    left: 17%;
+}
+
+.switch-border {
+    position: absolute;
+    height: 104%;
+    width: 870px;
+    background-color: black;
+    left: -1.1%;
+    border-radius: 90px;
 }
 
 .leftController {
-    grid-area: left-controller;
-    z-index: 1;
-    
-    background-color: crimson;
-    width: 150px;
-    height: 500px;
-    border-bottom-left-radius: 30px;
-    border-top-left-radius: 30px;
-    margin-left: 10px;
-    
+    background-color: #EA4F5E;
+    position: absolute;
+    height: 100%;
+    width: 17%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+}
+
+.left-analog {
+    position: absolute;
+    background-color: black;
+    width: 9%;
+    height: 14%;
+    border-radius: 50%;
+    top: 18%;
+    left: 4%;
 }
 
 .rightController {
-    grid-area: right-controller;
-    z-index: 2;
-
-    background-color: cyan;
-    width: 150px;
-    height: 500px;
-    border-bottom-right-radius: 30px;
-    border-top-right-radius: 30px;
-    margin-right: 10px;
+    background-color: #67CFE9;
+    position: absolute;
+    height: 100%;
+    width: 17%;
+    right: 0%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
 }
 
-.gridMainStyle {
-    
+.right-analog {
+    position: absolute;
+    background-color: black;
+    width: 9%;
+    height: 14%;
+    border-radius: 50%;
+    bottom: 38%;
+    right: 4%;
+}
+
+.dpad-top {
+    position: absolute;
+    background-color: black;
+    width: 4%;
+    height: 6%;
+    border-radius: 50%;
+    left: 6%;
+}
+
+.dpad-right {
+    position: absolute;
+    background-color: black;
+    width: 4%;
+    height: 6%;
+    border-radius: 50%;
+    left: 6%;
+    bottom: 35%;
+}
+
+.dpad-bottom {
+    position: absolute;
+    background-color: black;
+    width: 4%;
+    height: 6%;
+    border-radius: 50%;
+    left: 2%;
+    bottom: 41%;
+}
+
+.dpad-left {
+    position: absolute;
+    background-color: black;
+    width: 4%;
+    height: 6%;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 41%
+}
+
+.x-button {
+    position: absolute;
+    background-color: black;
+    width: 4%;
+    height: 6%;
+    border-radius: 50%;
+    right: 7%;
+    top: 15%;
+}
+
+.a-button {
+    position: absolute;
+    background-color: black;
+    width: 4%;
+    height: 6%;
+    border-radius: 50%;
+    right: 3%;
+    top: 22%;
+}
+
+.b-button {
+    position: absolute;
+    background-color: black;
+    width: 4%;
+    height: 6%;
+    border-radius: 50%;
+    right: 7%;
+    top: 29%;
+}
+
+.y-button {
+    position: absolute;
+    background-color: black;
+    width: 4%;
+    height: 6%;
+    border-radius: 50%;
+    right: 11%;
+    top: 22%;
 }
 
 #grid {
@@ -91,11 +198,10 @@ button {
     grid-template-rows: repeat(16, 2fr);
     grid-template-columns: repeat(16, 2fr);
     justify-content: center;
+    z-index: 1;
 }
 
 .contentDivs {
-    /* width: 40px;
-    height: 40px; */
     background: white;
 }
 
