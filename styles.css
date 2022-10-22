@@ -1,5 +1,4 @@
 * {
-    border: 2px solid red;
     border: 0px;
     margin: 0px;
 }
@@ -16,24 +15,14 @@ html {
     font-size: 70px;
 }
 
-#mainContainer {
-    position: relative;
-    border: none;
-    display: block;
-    margin: auto;
-    background-color: red;
-    height: 600px;
-    width: 600px;
-}
+/* #mainContainer {
+    
+} */
 
 button {
     background-color: white;
     padding: .5em;
     border-radius: 2px;
-}
-
-#densityButton {
-    
 }
 
 #gridContainer {
@@ -43,24 +32,21 @@ button {
     'left-controller . grid-screen . right-controller'
     'left-controller . grid-screen . right-controller'
     'left-controller . grid-screen . right-controller';
-
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
-    border: none;
 }
 
 #gridContainer {
-    z-index: 999;
+    position: relative;
+    margin: auto;
+    top: 40%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    
+    align-items: center;
     background-color: black;
     width: 850px;
     padding-top: .8em;
     padding-bottom: .8em;
     border-radius: 80px;
-    position: absolute;
-    top: 20%;
-    left: 17%;
 }
 
 .switch-border {
@@ -107,7 +93,7 @@ button {
     width: 9%;
     height: 14%;
     border-radius: 50%;
-    bottom: 38%;
+    bottom: 37%;
     right: 4%;
 }
 
