@@ -2,6 +2,7 @@
 const densityButton = document.querySelector('#densityButton');
 const clearBoard = document.querySelector('#clearBoard');
 let boardDensity;
+let colorSelected;
 
 // creates initial grid for use upon page load
 function initGrid() {
@@ -38,16 +39,21 @@ function removeGrid(parent) {
 // turns contentDiv's black upon mouseover
 function colorPixel() {
     document.querySelectorAll('.contentDivs').forEach(function(element) {
-        element.addEventListener('mouseover', () => {
-        element.style.background = 'black';
+        element.addEventListener('mousedown', () => {
+        element.style.background = selectColor();
         })
     })
     document.querySelectorAll('.horizontalDivs').forEach(function(element) {
-        element.addEventListener('mouseover', () => {
-        element.style.background = 'black';
+        element.addEventListener('mousedown', () => {
+        element.style.background = selectColor();
         })
     })
 }
+
+function selectColor() {
+    return document.querySelector('#selectColor input').value;
+}
+
 
 // clears current grid upon clicking the clear button by changing style of grid's childnodes to default color(white)
 function clearCurrentGrid() {
@@ -67,3 +73,4 @@ clearBoard.addEventListener('click', () => {
 
 // code ran upon page load
 initGrid();
+console.log(selectColor());

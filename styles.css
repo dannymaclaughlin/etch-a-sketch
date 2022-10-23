@@ -206,3 +206,7 @@ footer {
 .horizontalDivs {
     background: white;
 }
+
+#selectColor {
+    margin-top: .5%;
+}
